@@ -71,7 +71,7 @@ final class ConfiguratorTest extends TestCase
         self::assertArrayHasKey('targetPath', $config);
         self::assertSame('/example', $config['targetPath']);
         self::assertArrayHasKey('basePath', $config);
-        self::assertSame($expected, $config['basePath']);
+        self::assertEqualsCanonicalizing($expected, $config['basePath']);
         self::assertArrayHasKey('visitors', $config);
         self::assertCount(4, $config['visitors']);
     }
@@ -105,7 +105,7 @@ final class ConfiguratorTest extends TestCase
         $config = $configurator->getBitrixMockBuilderSettings('/example', ['iblock', 'main']);
         self::assertIsArray($config);
         self::assertArrayHasKey('basePath', $config);
-        self::assertSame($expected, $config['basePath']);
+        self::assertEqualsCanonicalizing($expected, $config['basePath']);
     }
 
     public function testGetBitrixMockBuilderSettingsExclude(): void
@@ -121,7 +121,7 @@ final class ConfiguratorTest extends TestCase
         $config = $configurator->getBitrixMockBuilderSettings('/example', excludeModules: ['iblock']);
         self::assertIsArray($config);
         self::assertArrayHasKey('basePath', $config);
-        self::assertSame($expected, $config['basePath']);
+        self::assertEqualsCanonicalizing($expected, $config['basePath']);
     }
 
     public function testGetPathsDefault(): void
@@ -134,7 +134,7 @@ final class ConfiguratorTest extends TestCase
             self::$fakePath . 'store/classes/',
         ];
         $configurator = new Configurator(self::$fakePath);
-        self::assertSame($expected, $configurator->getPaths());
+        self::assertEqualsCanonicalizing($expected, $configurator->getPaths());
     }
 
     public function testGetPathsIncludes(): void
@@ -144,7 +144,7 @@ final class ConfiguratorTest extends TestCase
             self::$fakePath . 'store/classes/',
         ];
         $configurator = new Configurator(self::$fakePath);
-        self::assertSame($expected, $configurator->getPaths(['iblock', 'store']));
+        self::assertEqualsCanonicalizing($expected, $configurator->getPaths(['iblock', 'store']));
     }
 
     public function testGetPathsExclude(): void
@@ -154,7 +154,7 @@ final class ConfiguratorTest extends TestCase
             self::$fakePath . 'store/classes/',
         ];
         $configurator = new Configurator(self::$fakePath);
-        self::assertSame($expected, $configurator->getPaths(excludeModules: ['main']));
+        self::assertEqualsCanonicalizing($expected, $configurator->getPaths(excludeModules: ['main']));
     }
 
     public function testGetPathsAll(): void
@@ -168,7 +168,7 @@ final class ConfiguratorTest extends TestCase
             self::$fakePath . 'store/classes/',
         ];
         $configurator = new Configurator(self::$fakePath);
-        self::assertSame($expected, $configurator->getPaths(bitrixOnly: false));
+        self::assertEqualsCanonicalizing($expected, $configurator->getPaths(bitrixOnly: false));
     }
 
     public function testGetBitrixVisitors(): void

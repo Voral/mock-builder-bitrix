@@ -43,7 +43,7 @@
     "vi:auto": "php ./vendor/bin/vs-version-increment",
     "vi:debug": "php ./vendor/bin/vs-version-increment --debug",
     "test": "php vendor/bin/phpunit --display-warnings",
-    "stan": "vendor/bin/phpstan analyse last_version/lib tests",
+    "stan": "vendor/bin/phpstan analyse src tests",
     "fixer": "vendor/bin/php-cs-fixer fix --dry-run --diff",
     "checkit": [
       "@fixer",
