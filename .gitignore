@@ -7,3 +7,4 @@
 .mock-builder-cache
 reports
 .phpunit.result.cache
+test.php

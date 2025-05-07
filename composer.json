@@ -27,6 +27,11 @@
       "Vasoft\\MockBuilderBitrix\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Vasoft\\MockBuilderBitrix\\Tests\\": "tests/"
+    }
+  },
   "scripts": {
     "mock:build": "php ./vendor/bin/vs-mock-builder.php",
     "vi:auto": "php ./vendor/bin/vs-version-increment",
