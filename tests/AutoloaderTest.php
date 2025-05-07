@@ -110,11 +110,8 @@ final class AutoloaderTest extends TestCase
      */
     public function testIncludesExtended(): void
     {
-        $autoloader = new Autoloader(__DIR__, includes: [self::$fakeFunctionsPath, self::$fakeFunctionsPath2]);
+        $autoloader = new Autoloader(__DIR__, includes: [self::$fakeFunctionsPath2 . 'functions4.php']);
         $autoloader->includes();
-        self::assertTrue(function_exists('TestExampleFake1'), 'Function TestExampleFake1 not registered');
-        self::assertTrue(function_exists('TestExampleFake2'), 'Function TestExampleFake2 not registered');
-        self::assertFalse(function_exists('TestExampleFake3'), 'Function TestExampleFake3 not registered');
         self::assertTrue(function_exists('TestExampleFake4'), 'Function TestExampleFake4 not registered');
     }
 

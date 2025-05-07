@@ -38,7 +38,9 @@ class Autoloader
     {
         $this->includeFromPath(__DIR__ . '/functions/');
         foreach ($this->includes as $include) {
-            $this->includeFromPath($include);
+            if (file_exists($include)) {
+                include_once $include;
+            }
         }
     }
 
