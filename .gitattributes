@@ -5,3 +5,5 @@
 /.gitignore export-ignore
 /composer.lock export-ignore
 /.vs-mock-builder.php export-ignore
+/docs export-ignore
+/.github export-ignore
