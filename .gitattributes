@@ -1,0 +1,7 @@
+/.phpstan.neon.dist export-ignore
+/.php-cs-fixer.php export-ignore
+/tests export-ignore
+/phpunit.xml export-ignore
+/.gitignore export-ignore
+/composer.lock export-ignore
+/.vs-mock-builder.php export-ignore

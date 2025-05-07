@@ -1,0 +1,9 @@
+*.tar.gz
+.directory
+.idea
+/.vs-mock-builder.local.php
+/bx/
+/var/
+.mock-builder-cache
+reports
+.phpunit.result.cache
