@@ -1,62 +1,62 @@
 {
-  "name": "voral/mock-builder-bitrix",
-  "type": "library",
-  "description": "Расширение для voral/mock-builder добавляющее готовые настройки для генерации моков ядра Битрикс",
-  "keywords": [
-    "bitrix",
-    "unittesting",
-    "mock",
-    "mockbuilder"
-  ],
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Alexander Vorobyev",
-      "email": "voral.adm@gmail.com"
+    "name": "voral/mock-builder-bitrix",
+    "type": "library",
+    "description": "\u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 \u0434\u043b\u044f voral/mock-builder \u0434\u043e\u0431\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0435 \u0433\u043e\u0442\u043e\u0432\u044b\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0434\u043b\u044f \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u0438 \u043c\u043e\u043a\u043e\u0432 \u044f\u0434\u0440\u0430 \u0411\u0438\u0442\u0440\u0438\u043a\u0441",
+    "keywords": [
+        "bitrix",
+        "unittesting",
+        "mock",
+        "mockbuilder"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Vorobyev",
+            "email": "voral.adm@gmail.com"
+        }
+    ],
+    "version": "1.0.0",
+    "require": {
+        "php": ">=8.1",
+        "voral/mock-builder": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.66.0",
+        "phpunit/phpunit": "^10.5",
+        "php-mock/php-mock-phpunit": "^2.13",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "voral/version-increment": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vasoft\\MockBuilderBitrix\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vasoft\\MockBuilderBitrix\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "mock:build": "php ./vendor/bin/vs-mock-builder.php",
+        "vi:auto": "php ./vendor/bin/vs-version-increment",
+        "vi:debug": "php ./vendor/bin/vs-version-increment --debug",
+        "test": "php vendor/bin/phpunit --display-warnings",
+        "stan": "vendor/bin/phpstan analyse src tests",
+        "fixer": "vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "checkit": [
+            "@fixer",
+            "@stan"
+        ]
+    },
+    "scripts-descriptions": {
+        "mock:build": "Test command for building mocks.",
+        "vi:auto": "Run the version increment tool in automatic mode.",
+        "vi:debug": "Run the version increment tool in debug mode to preview changes without applying them.",
+        "test": "Run PHPUnit tests.",
+        "stan": "Run PHPStan static analysis on the 'src' and 'tests' directories.",
+        "fixer": "Check coding standards using PHP-CS-Fixer (dry-run mode).",
+        "check": "Run all checks, including coding standards and static analysis."
     }
-  ],
-  "version": "0.1.0",
-  "require": {
-    "php": ">=8.1",
-    "voral/mock-builder": "^1.0"
-  },
-  "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.66.0",
-    "phpunit/phpunit": "^10.5",
-    "php-mock/php-mock-phpunit": "^2.13",
-    "phpstan/phpstan": "^2.1",
-    "phpstan/phpstan-phpunit": "^2.0",
-    "voral/version-increment": "^2.1"
-  },
-  "autoload": {
-    "psr-4": {
-      "Vasoft\\MockBuilderBitrix\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Vasoft\\MockBuilderBitrix\\Tests\\": "tests/"
-    }
-  },
-  "scripts": {
-    "mock:build": "php ./vendor/bin/vs-mock-builder.php",
-    "vi:auto": "php ./vendor/bin/vs-version-increment",
-    "vi:debug": "php ./vendor/bin/vs-version-increment --debug",
-    "test": "php vendor/bin/phpunit --display-warnings",
-    "stan": "vendor/bin/phpstan analyse src tests",
-    "fixer": "vendor/bin/php-cs-fixer fix --dry-run --diff",
-    "checkit": [
-      "@fixer",
-      "@stan"
-    ]
-  },
-  "scripts-descriptions": {
-    "mock:build": "Test command for building mocks.",
-    "vi:auto": "Run the version increment tool in automatic mode.",
-    "vi:debug": "Run the version increment tool in debug mode to preview changes without applying them.",
-    "test": "Run PHPUnit tests.",
-    "stan": "Run PHPStan static analysis on the 'src' and 'tests' directories.",
-    "fixer": "Check coding standards using PHP-CS-Fixer (dry-run mode).",
-    "check": "Run all checks, including coding standards and static analysis."
-  }
 }
