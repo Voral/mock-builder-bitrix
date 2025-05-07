@@ -189,6 +189,8 @@ final class ConfiguratorTest extends TestCase
         self::assertInstanceOf(AddMockToolsVisitor::class, $visitors[2]);
         self::assertSame('Bitrix', $this->getObjectProperty($visitors[2], 'baseNamespace'));
         self::assertTrue($this->getObjectProperty($visitors[2], 'skipThrowable'));
+        self::assertFalse($this->getObjectProperty($visitors[2], 'copyDefinition'));
+        self::assertFalse($this->getObjectProperty($visitors[2], 'copyFunction'));
 
         self::assertInstanceOf(RemoveFinalVisitor::class, $visitors[3]);
         self::assertFalse($this->getObjectProperty($visitors[3], 'skipThrowable'));

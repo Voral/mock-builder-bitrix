@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d60d63e0cb0374dc19b92eb97e652328",
+    "content-hash": "e88eae0818c3be24705090d43671f004",
     "packages": [
         {
             "name": "doctrine/deprecations",
@@ -336,16 +336,16 @@
         },
         {
             "name": "voral/mock-builder",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Voral/mock-builder.git",
-                "reference": "2cdbd9526dcf22ab848c6aa9f666acf796550379"
+                "reference": "10da89d72e793c20ed5af7cedfb460b42aa488c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Voral/mock-builder/zipball/2cdbd9526dcf22ab848c6aa9f666acf796550379",
-                "reference": "2cdbd9526dcf22ab848c6aa9f666acf796550379",
+                "url": "https://api.github.com/repos/Voral/mock-builder/zipball/10da89d72e793c20ed5af7cedfb460b42aa488c1",
+                "reference": "10da89d72e793c20ed5af7cedfb460b42aa488c1",
                 "shasum": ""
             },
             "require": {
@@ -393,9 +393,9 @@
             "support": {
                 "email": "voral.adm@gmail.com",
                 "issues": "https://github.com/Voral/mock-builder/issues",
-                "source": "https://github.com/Voral/mock-builder/tree/v1.0.0"
+                "source": "https://github.com/Voral/mock-builder/tree/v1.1.0"
             },
-            "time": "2025-05-07T04:32:36+00:00"
+            "time": "2025-05-07T12:04:22+00:00"
         },
         {
             "name": "webmozart/assert",

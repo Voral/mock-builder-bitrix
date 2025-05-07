@@ -20,7 +20,7 @@ class Configurator
         return [
             new PublicAndConstFilter(true),
             new SetReturnTypes($targetPhpVersion, true),
-            new AddMockToolsVisitor('Bitrix', true),
+            new AddMockToolsVisitor('Bitrix', true, false, false),
             new RemoveFinalVisitor(),
         ];
     }
