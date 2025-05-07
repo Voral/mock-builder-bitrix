@@ -1,7 +1,13 @@
 {
   "name": "voral/mock-builder-bitrix",
   "type": "library",
-  "description": "Extension for voral/mock-builder for Bitrix CMS",
+  "description": "Расширение для voral/mock-builder добавляющее готовые настройки для генерации моков ядра Битрикс",
+  "keywords": [
+    "bitrix",
+    "unittesting",
+    "mock",
+    "mockbuilder"
+  ],
   "license": "MIT",
   "authors": [
     {
