@@ -26,7 +26,7 @@
         "php-mock/php-mock-phpunit": "^2.13",
         "phpstan/phpstan": "^2.1",
         "phpstan/phpstan-phpunit": "^2.0",
-        "voral/version-increment": "^2.1"
+        "voral/version-increment": "^3.0"
     },
     "autoload": {
         "psr-4": {
